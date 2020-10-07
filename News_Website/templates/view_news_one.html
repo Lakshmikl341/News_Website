@@ -1,0 +1,21 @@
+{% extends './base.html' %}
+
+{% block title %}Views_One{% endblock %}
+
+{% block content %}
+    <br>
+    <br>
+   <table align="center">
+     <tr><th><h4>{{ news.news_type }}</h4></th></tr>
+     <tr><th><h4>{{ news.news_headline }}</h4></th></tr>
+     <tr><td><p>{{ news.post_news_text }}</p></td></tr>
+     <tr><td>{{ news.post_news_image }}</td></tr>
+
+
+<br>
+<br>
+</table>
+
+
+
+{% endblock %}

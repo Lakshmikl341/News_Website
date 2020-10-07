@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update News</title>
+</head>
+<body bgcolor="#e6e6fa">
+{% include "base.html" %}
+{% block title %}Update{% endblock %}
+    <h1 align="center">Update News.</h1>
+    <form action="" method="post">
+        {%csrf_token%}
+        <h4 align="center">{{form.as_p}}</h4>
+        <h4 align="center" ><input align="center" type="submit" value="Update"></h4>
+    </form>
+</body>
+</html>

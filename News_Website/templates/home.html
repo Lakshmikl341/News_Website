@@ -1,0 +1,16 @@
+{% extends './base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <br>
+    <br>
+    <h2  align="center" style="font-size:100px; animation:normal; color:brown" >News Portal</h2>
+    <br>
+    <table align="center">
+    <tr><th ><a style="font-size:25px" class="px-4 py-2 uppercase my-2 text-xs font-bold tracking-wide text-white rounded-lg hover:bg-teal-700 bg-blue-500 inline-block" href="{% url 'post' %}">Post_News</a></th></tr>
+    <tr><th><a style="font-size:25px" class="px-4 py-2 uppercase my-2 text-xs font-bold tracking-wide text-white rounded-lg hover:bg-teal-700 bg-yellow-500 inline-block" href="{% url 'view_news' %}">View_News</a></th></tr>
+    </table>
+
+
+{% endblock %}

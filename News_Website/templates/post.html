@@ -1,0 +1,23 @@
+{% extends './base.html' %}
+
+{% block title %}POST{% endblock %}
+
+{% block content %}
+
+<form action="{% url 'save' %}" method="post">
+    {% csrf_token %}
+    <table align="center" >
+        <br>
+        <tr><td><h4>Select News{{ news_post.news_type}}</h4></td></tr>
+        <br>
+        <tr><td><h4>Headline{{ news_post.news_headline}}</h4></td></tr>
+        <br>
+        <tr><td><h4  style="fill: aliceblue">Description{{ news_post.post_news_text}}</h4></td></tr>
+        <br>
+        <tr><td><h4>File/Image{{ news_post.post_news_image}}</h4></td></tr><br>
+
+        <br>
+        <tr><th><button style="font-size:15px" class="px-4 py-2 uppercase my-2 text-xs font-bold tracking-wide text-white rounded-lg hover:bg-teal-700 bg-pink-500 inline-block" type="submit">POST</button></th></tr>
+    </table>
+</form>
+{% endblock %}

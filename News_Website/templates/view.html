@@ -1,0 +1,21 @@
+{% extends './base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% for i in news %}
+<table align="center">
+<br>
+    <br>
+    <br>
+<tr><th>
+    <ul>
+    <li><a style="color: navy; font-size: 20px" href="{% url 'view_news_one' i.pk %}">{{i.news_headline}}</a></li>
+    <li><a class="px-4 py-2 uppercase my-2 text-xs font-bold tracking-wide text-white rounded-lg hover:bg-teal-700 bg-purple-500 inline-block" href="{% url 'update' i.pk %}">Update</a></li>
+    <li><a class="px-4 py-2 uppercase my-2 text-xs font-bold tracking-wide text-white rounded-lg hover:bg-teal-700 bg-red-500 inline-block" href="{% url 'delete' i.pk %}">Delete</a></li>
+</ul>
+
+</th></tr>
+</table>
+{% endfor %}
+{% endblock %}
